@@ -1,0 +1,9 @@
+#!/bin/sh
+# Lance Wayworld comme session de bureau complète.
+# Wayworld est une app Bevy : elle a besoin d'un hôte Wayland. On utilise `cage`
+# (compositeur kiosque wlroots) qui lui donne tout l'écran, avec la gestion DRM/libinput.
+export XDG_SESSION_TYPE=wayland
+export XDG_CURRENT_DESKTOP=Wayworld
+export WLR_NO_HARDWARE_CURSORS=1   # utile avec les pilotes NVIDIA propriétaires
+export WLR_RENDERER=${WLR_RENDERER:-vulkan}
+exec cage -s -- wayworld "$@"

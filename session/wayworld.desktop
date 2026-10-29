@@ -1,0 +1,6 @@
+[Desktop Entry]
+Name=Wayworld
+Comment=Ton bureau Linux sous forme de jeu 3D (apps flottantes, pins au bras)
+Exec=/usr/local/bin/wayworld-session
+Type=Application
+DesktopNames=Wayworld
